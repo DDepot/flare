@@ -181,7 +181,7 @@ func addNodeFlags(fs *flag.FlagSet) {
 	fs.Uint64(OutboundThrottlerNodeMaxAtLargeBytesKey, uint64(constants.DefaultMaxMessageSize), "Max number of bytes a node can take from the outbound message throttler's at-large allocation.  Must be at least the max message size")
 
 	// HTTP APIs
-	fs.String(HTTPHostKey, "127.0.0.1", "Address of the HTTP server")
+	fs.String(HTTPHostKey, "0.0.0.0", "Address of the HTTP server")
 	fs.Uint(HTTPPortKey, 9650, "Port of the HTTP server")
 	fs.Bool(HTTPSEnabledKey, false, "Upgrade the HTTP server to HTTPs")
 	fs.String(HTTPSKeyFileKey, "", fmt.Sprintf("TLS private key file for the HTTPs server. Ignored if %s is specified", HTTPSKeyContentKey))
